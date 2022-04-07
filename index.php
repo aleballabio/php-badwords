@@ -11,7 +11,7 @@
 <body style="text-align: center;">
     <?php
     $censoredword = $_GET["censoredword"];
-    $text = "C'era una volta Pulcinella e Pinocchio. I due si amavano moltissimo fino a quando Pulcinella decise di accoltelare Pinocchio senza un valido motivo. \n\rQuesto gesto fu, per lei, la scelta più bella mai presa in tutta la sua vita. La morale della favola? \n\rIl gesto di accoltelare le persone è molto liberatorio.";
+    $text = "C'era una volta Pulcinella e Pinocchio. I due si amavano moltissimo fino a quando Pulcinella decise di accoltelare Pinocchio senza un valido motivo.\rQuesto gesto fu, per lei, la scelta più bella mai presa in tutta la sua vita. La morale della favola?\rIl gesto di accoltelare le persone è molto liberatorio.";
     $text_length = trim(str_replace(" ", "", $text));
     $text_countwords = explode(" ", trim($text));
     $text_censored = str_replace($censoredword, "***", $text);
