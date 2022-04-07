@@ -18,7 +18,7 @@
     ?>
     <h1>Pulcinella e Pinocchio</h1>
 
-    <h2> Lunghezza in caratteri della storia: <br>
+    <h2> Lunghezza della storia: <br>
         <?php echo "Caratteri:" . strlen($text_length) . "</br>";
         echo "Parole:" . count($text_countwords);
         ?>
