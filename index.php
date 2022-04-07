@@ -8,19 +8,19 @@
     <title>Pulcinella e Pinocchio</title>
 </head>
 
-<body>
+<body style="text-align: center;">
     <?php
     $censoredword = $_GET["censoredword"];
-    $text = "C'era una volta Pulcinella e Pinocchio. I due si amavano moltissimo fino a quando Pulcinella decise di accoltelare Pinocchio senza un valido motivo.\rQuesto gesto fu, per lei, la scelta più bella mai presa in tutta la sua vita. La morale della favola?\rIl gesto di accoltelare le persone è molto liberatorio.";
-    $text_length = trim($text);
-    $text_countwords = explode(" ", $text);
+    $text = "C'era una volta Pulcinella e Pinocchio. I due si amavano moltissimo fino a quando Pulcinella decise di accoltelare Pinocchio senza un valido motivo. \n\rQuesto gesto fu, per lei, la scelta più bella mai presa in tutta la sua vita. La morale della favola? \n\rIl gesto di accoltelare le persone è molto liberatorio.";
+    $text_length = trim(str_replace(" ", "", $text));
+    $text_countwords = explode(" ", trim($text));
     $text_censored = str_replace($censoredword, "***", $text);
     ?>
     <h1>Pulcinella e Pinocchio</h1>
 
-    <h2> Lunghezza della storia: <br>
-        <?php echo "Caratteri:" . strlen($text_length) . "</br>";
-        echo "Parole:" . count($text_countwords);
+    <h2> Lunghezza della storia <br>
+        <?php echo "Caratteri: " . strlen($text_length) . "</br>";
+        echo "Parole: " . count($text_countwords);
         ?>
     </h2>
 
